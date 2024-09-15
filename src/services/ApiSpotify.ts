@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const BASE_URL = 'https://api.spotify.com/v1';
-const clientId = '80bcb0aac3974b6c83f426abcf134c57';
-const clientSecret = 'fd0db6cfc2f542c2a27fc72fbee64794';
-const redirectUri = 'https://moodify-two.vercel.app/callback';
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const clientSecret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 
 const getAccessToken = (): string | null => {
   return localStorage.getItem('spotifyAccessToken');
