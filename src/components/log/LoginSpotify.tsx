@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { exchangeAuthorizationCode, fetchAndSetUserData } from "../../services/ApiSpotify";
 
 const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI || 'https://moodify-two.vercel.app/callback';
-console.log(redirectUri)
+const redirectUri = 'https://moodify-two.vercel.app/callback';
+
 const scopes = [
   'user-read-private',
   'user-read-email',
