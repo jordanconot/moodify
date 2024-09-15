@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { exchangeAuthorizationCode, fetchAndSetUserData } from "../../services/ApiSpotify";
 
-const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const clientId = '80bcb0aac3974b6c83f426abcf134c57';
 const redirectUri = 'https://moodify-two.vercel.app/callback';
 
 const scopes = [
