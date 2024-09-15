@@ -102,12 +102,16 @@ export default function Questionnaire({ isOpen, onClose }: QuestionnaireProps) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-lg max-w-2xl w-full relative overflow-y-auto h-screen sm:max-h-[80vh]">
+      <div className="bg-white p-8 rounded-lg max-w-2xl w-full relative overflow-y-auto h-screen sm:max-h-[80vh] animate__animated animate__slideInDown animate__faster">
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
           onClick={() => handleClose()}
         >
-          <img src='/assets/svg/circle-x.svg' alt='Fermer' />
+          <img 
+          src='/assets/svg/circle-x.svg' 
+          alt='Fermer' 
+          className='hover:opacity-60'
+          />
         </button>
 
         {isFinalQuestion ? (
@@ -133,11 +137,11 @@ export default function Questionnaire({ isOpen, onClose }: QuestionnaireProps) {
           <>
             <h2 className="text-modal text-2xl font-semibold mb-4">Question {currentQuestionId}/{questions.length}</h2>
             <p className="text-lg text-gray-700 mb-6">{questions.find(q => q.id === currentQuestionId)?.text}</p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="grid grid-cols-2 gap-4 justify-center">
               {questions.find(q => q.id === currentQuestionId)?.options.map((option) => (
                 <button
                   key={option.label}
-                  className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark"
+                  className="bg-primary text-white px-4 py-2 rounded-lg hover:opacity-60"
                   onClick={() => handleNext(option.label)}
                 >
                   {option.label}
