@@ -3,8 +3,8 @@
 import { useEffect } from "react";
 import { exchangeAuthorizationCode, fetchAndSetUserData } from "../../services/ApiSpotify";
 
-const clientId = '80bcb0aac3974b6c83f426abcf134c57';
-const redirectUri = 'https://moodify-two.vercel.app/callback';
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 
 const scopes = [
   'user-read-private',
@@ -25,7 +25,7 @@ interface LoginSpotifyProps {
 export default function LoginSpotify({ onLogin, buttonClassName }: LoginSpotifyProps) {
   const handleLogin = () => {
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes.join(' '))}`;
-    console.log("Generated Auth URL:", authUrl); 
+
     // Rediriger l'utilisateur vers Spotify pour se connecter
     window.location.href = authUrl;
   };
