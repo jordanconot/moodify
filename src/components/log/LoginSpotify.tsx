@@ -25,7 +25,7 @@ interface LoginSpotifyProps {
 export default function LoginSpotify({ onLogin, buttonClassName }: LoginSpotifyProps) {
   const handleLogin = () => {
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes.join(' '))}`;
-
+    console.log("Generated Auth URL:", authUrl); 
     // Rediriger l'utilisateur vers Spotify pour se connecter
     window.location.href = authUrl;
   };
