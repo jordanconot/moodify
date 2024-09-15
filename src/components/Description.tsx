@@ -72,7 +72,7 @@ export default function Description({ onTryFreeClick }: { onTryFreeClick: () => 
           </div>
           <div
             ref={centerDivRef}
-            className={`w-full xl:w-1/2 p-8 gap-7 flex flex-col items-center justify-center bg-custom-radial rounded-[40px] relative z-20 transform xl:translate-y-8 shadow-lg transition-transform  duration-700 ease-in-out ${centerDivVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-60'
+            className={`w-full xl:w-1/2 p-8 gap-7 flex flex-col items-center justify-center bg-custom-radial rounded-[40px] relative z-20  shadow-lg transition-transform  duration-700 ease-in-out ${centerDivVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-60'
               }`}
           >
             {!user && (
@@ -97,7 +97,7 @@ export default function Description({ onTryFreeClick }: { onTryFreeClick: () => 
           {!user && (
             <div
               ref={rightDivRef}
-              className={`w-full xl:w-1/2 p-8 gap-7 flex flex-col items-center justify-center bg-custom-radial rounded-[40px] relative z-20 transform xl:-translate-y-20 shadow-lg transition-transform duration-700 ease-in-out ${rightDivVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-60'
+              className={`w-full xl:w-1/2 p-8 gap-7 flex flex-col items-center justify-center bg-custom-radial rounded-[40px] relative z-20 transform xl:-translate-y-20 shadow-lg transition-transform duration-700 ease-in-out ${rightDivVisible ? 'opacity-100 xl:translate-x-0' : 'opacity-0 xl:translate-x-60'
                 }`}
             >
               <p className="text-primary text-center mt-4">

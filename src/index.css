@@ -102,11 +102,6 @@ body {
   opacity: 0;
 }
 
-
-
-
-
-
 .spinning {
   animation: spinAnimation 3s cubic-bezier(0.5, 0.1, 0.5, 1) forwards;
 }
@@ -151,6 +146,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a204e;
+  background: #FFF;
   /* Couleur du thumb au survol */
 }
