@@ -5,6 +5,7 @@ import { exchangeAuthorizationCode, fetchAndSetUserData } from "../../services/A
 
 const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI || 'https://moodify-two.vercel.app/callback';
+console.log(redirectUri)
 const scopes = [
   'user-read-private',
   'user-read-email',
