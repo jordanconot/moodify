@@ -42,9 +42,9 @@ const NowPlaying = () => {
   const artistNames = item.artists.map((artist: any) => artist.name).join(', ');
 
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col lg:flex-row items-center bg-primary p-4 rounded-xl animated-border">
-        <h3 className="text-primary text-base sm:text-2xl">En cours de lecture :</h3>
+    <div className="flex justify-center flex-col gap-4">
+      <h3 className="text-primary text-base text-center sm:text-2xl">En cours de lecture :</h3>
+      <div className="flex flex-col lg:flex-row items-center bg-primary  animated-border">
         <img src={item.album.images[0]?.url} alt={item.name} className="w-16 h-16 rounded-md mx-4" />
         <div>
           <p className="text-white font-semibold">{item.name}</p>
