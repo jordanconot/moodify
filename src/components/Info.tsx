@@ -10,10 +10,15 @@ export default function Info() {
 
       const sectionTop = sectionRef.current.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
+      const scrollTop = window.scrollY;
 
       // Si la partie supérieure du composant est dans la fenêtre d'affichage, l'afficher
-      if (sectionTop < windowHeight) {
+      if (sectionTop < windowHeight && scrollTop > 0) {
         setIsVisible(true);
+      }
+      // Si l'utilisateur est tout en haut de la page, cacher l'élément
+      else if (scrollTop === 0) {
+        setIsVisible(false);
       }
     };
 
@@ -28,11 +33,10 @@ export default function Info() {
 
   return (
     <section
-    ref={sectionRef}
-    className={`relative z-10 mx-auto -mt-52 px-8 py-12 ${
-      isVisible ? 'animate__animated animate__fadeInUp' : 'hidden'
-    }`}
-  >
+      ref={sectionRef}
+      className={`relative z-10 mx-auto -mt-52 px-8 py-12 ${isVisible ? 'animate__animated animate__fadeInUp' : 'hidden'
+        }`}
+    >
       <div className="bg-custom-radial text-center mx-auto px-8 py-12 backdrop-blur-sm rounded-[40px]">
         <h2 className="text-primary text-xl sm:text-4xl font-semibold mb-4">
           Musique sur mesure pour votre Bien-Être

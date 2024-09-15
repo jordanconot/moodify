@@ -50,7 +50,7 @@ export default function LoginSpotify({ onLogin, buttonClassName }: LoginSpotifyP
   return (
     <button
       onClick={handleLogin}
-      className={`flex p-2 uppercase justify-center items-center text-primary font-semibold rounded-full min-w-60 text-base px-10 py-3.5 overflow-hidden group bg-full relative hover:bg-gradient-to-r hover:from-color-3 hover:to-color-4  hover:ring-2 hover:ring-offset-2 hover:ring-color-3 transition-all ease-in-out duration-300 ${buttonClassName}`}
+      className={`flex p-2 uppercase justify-center items-center text-primary font-semibold rounded-full text-base px-6 py-3.5 overflow-hidden group bg-full relative hover:bg-gradient-to-r hover:from-secondary hover:to-modal  hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-in-out duration-300 ${buttonClassName}`}
     >
       Connexion à Spotify
       <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-primary opacity-10 rotate-12 group-hover:-translate-x-80 ease-in-out"></span>
