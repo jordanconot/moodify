@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import LoginSpotify from '../components/log/LoginSpotify';
 import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
 import SpotifyCallback from '../utils/SpotifyCallback';
 
 export default function AppRouter() {
@@ -10,6 +11,7 @@ export default function AppRouter() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginSpotify onLogin={(userData) => console.log(userData)} />} />
         <Route path='/callback' element={<SpotifyCallback />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
   )

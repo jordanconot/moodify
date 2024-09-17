@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         {user ? (
           <span className="text-primary font-semibold sm:text-2xl">
-            Bienvenue {user.display_name} 🖐️
+            Bienvenue {user.display_name} 💚
           </span>
         ) : (
           <LoginSpotify onLogin={handleLogin} buttonClassName={'text-xs sm:text-lg'} />

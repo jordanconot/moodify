@@ -35,7 +35,14 @@ const NowPlaying = () => {
   }, []);
 
   if (!currentlyPlaying || !currentlyPlaying.item || isFetching) {
-    return null;
+    return <div className="flex justify-center flex-col gap-4">
+      <h3 className="text-primary text-base text-center sm:text-2xl">En cours de lecture :</h3>
+      <div className="flex flex-col lg:flex-row items-center bg-primary  animated-border">
+        <div>
+          <p className="text-grey text-sm">Aucunne music en cours de lecture...</p>
+        </div>
+      </div>
+    </div>
   }
 
   const { item } = currentlyPlaying;
