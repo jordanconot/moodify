@@ -144,6 +144,4 @@ export const questions: Question[] = [
       { label: "Prendre soin de moi", weights: { Fatigué: 3, Calme: 2 } },
     ],
   },
-
-  // Ajoutez plus de questions au besoin pour couvrir d'autres aspects
 ];

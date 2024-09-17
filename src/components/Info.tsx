@@ -41,7 +41,7 @@ export default function Info() {
         <h2 className="text-primary text-xl sm:text-4xl font-semibold mb-4">
           Musique sur mesure pour votre Bien-Être
         </h2>
-        <p className="text-gray-300 sm:text-xl font-normal mb-8">
+        <p className="text-gray-300 sm:text-xl font-normal mb-16">
           Laissez la musique s'harmoniser avec vos émotions et améliorez chaque moment avec des playlists adaptées à votre état d'esprit.
         </p>
         <div className="flex justify-around items-center flex-wrap gap-6">
