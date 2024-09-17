@@ -8,21 +8,13 @@ interface MoodPlaylistsProps {
   mood: Mood;
   playlists: string[];
   onTryFreeClick: () => void;
-  isQuestionnaireCompleted: boolean; 
 }
 
-export default function MoodPlaylists({ mood, playlists, onTryFreeClick, isQuestionnaireCompleted }: MoodPlaylistsProps) {
+export default function MoodPlaylists({ mood, playlists, onTryFreeClick }: MoodPlaylistsProps) {
   const textSectionRef = useRef<HTMLDivElement | null>(null);
   const playlistsSectionRef = useRef<HTMLDivElement | null>(null);
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [arePlaylistsVisible, setArePlaylistsVisible] = useState(false);
-
-  useEffect(() => {
-    if (isQuestionnaireCompleted && playlists.length > 0 && playlistsSectionRef.current) {
-      // Défilement fluide vers la section des playlists
-      playlistsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [isQuestionnaireCompleted, playlists]);
 
   useEffect(() => {
     const handleScroll = () => {

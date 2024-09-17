@@ -25,6 +25,7 @@ export default function Home() {
   const [isSpotifyConnected, setIsSpotifyConnected] = useState<boolean>(true);
   const [categorizedTracks, setCategorizedTracks] = useState<Record<string, any[]>>({});
   const [loading, setLoading] = useState<boolean>(true);
+  const [isQuestionnaireCompleted, setIsQuestionnaireCompleted] = useState<boolean>(false);
 
   const playlistsRef = useRef<HTMLDivElement | null>(null);
 
@@ -121,10 +122,17 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    // Faire défiler vers les playlists uniquement si le questionnaire est terminé et les playlists sont prêtes
+    if (isQuestionnaireCompleted && mood && playlists.length > 0 && playlistsRef.current) {
+      playlistsRef.current.scrollIntoView({ behavior: "smooth" });
+      setIsQuestionnaireCompleted(false); // Remettre à false après le scroll pour éviter des scrolls ultérieurs
+    }
+  }, [playlists, mood, isQuestionnaireCompleted]);
+
   const handleTryFreeClick = () => {
     setIsQuestionnaireOpen(true);
   };
-
 
   return (
     <>
