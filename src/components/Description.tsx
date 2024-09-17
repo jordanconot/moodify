@@ -78,9 +78,14 @@ export default function Description({ onTryFreeClick }: { onTryFreeClick: () => 
             {!user && (
               <>
                 <p className="text-primary text-center">
-                  En vous connectant à votre compte Spotify, vous pourrez profiter pleinement de l'expérience avec un accès illimité à toutes les playlists que nous recommandons, sans interruptions. Vous aurez également accès à des fonctionnalités supplémentaires, telles qu'un graphique interactif montrant l'évolution de vos genres musicaux préférés, ainsi que des statistiques détaillées sur la façon dont vos morceaux les plus écoutés ont évolué au fil du temps. 🎵
+                  Connectez vous à notre compte Spotify de test (dans l'attente que Spotify valide l'application), vous pourrez profiter pleinement de l'expérience avec un accès illimité à toutes les playlists que nous recommandons, sans interruptions. Vous aurez également accès à des fonctionnalités supplémentaires, telles qu'un graphique interactif montrant l'évolution des genres musicaux préférés, ainsi que des statistiques détaillées sur la façon dont les morceaux les plus écoutés ont évolué au fil du temps. 🎵
                 </p>
                 <p className="text-primary text-center">De plus, découvrez de nouvelles chansons de manière ludique avec notre roue de découverte musicale : faites-la tourner pour obtenir des recommandations surprises basées sur vos goûts musicaux actuels ! 🎶</p>
+                <div className="text-primary text-center text-base font-semibold">
+                  <p className="text-primary text-center">Utilisez le compte suivant pour vous connecter à Spotify :</p>
+                  <p className="text-primary text-center">Email : moodify@gmail.com</p>
+                  <p className="text-primary text-center">Mot de passe : Moodify34000</p>
+                </div>
               </>
             )}
             {user ? (
